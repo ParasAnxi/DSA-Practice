@@ -1,0 +1,11 @@
+FlowChart-> 
+
+A flowchart is a graphical representation of the steps a program takes to process data. In this, we can use several geometric patterns to illustrate the numerous actions the program carries out.
+
+Algorithm->
+
+An algorithm is a procedure or set of rules that defines how a program is to be executed.
+
+Pseudocode->
+
+Pseudocode is an artificial and informal language that helps programmers develop algorithms. Pseudocode is a "text-based" detail (algorithmic) design tool. The rules of Pseudocode are reasonably straightforward. All statements showing "dependency" are to be indented. These include while, do, for, if, switch.
