@@ -1,20 +1,23 @@
 #include<iostream>
 using namespace std;
 
-int pivot(int *arr,int s , int e){
-    int mid=s+(e-s)/2;
-    if(arr[mid]<arr[mid+1] && arr[mid]<arr[mid-1]){
-        return arr[mid];
+int pivot(int *arr , int size){
+    int s = 0;
+    int e = size - 1;
+    int mid = s+(e-s)/2;
+    while(s<e){
+        if(arr[mid]>=arr[0]){
+            s=mid+1;
+        }
+        else{
+            e=mid;
+        }
+        mid=s+(e-s)/2;
     }
-    else if(arr[mid]>=arr[0]){
-        return pivot(arr,mid+1,e);
-    }
-    else{
-        return pivot(arr,s,mid);
-    }
+    return s;
 }
 int main(){
-    int arr[6]={0,1,2,3,4,5};
+    int arr[6]={10,11,2,3,4,5};
     int n = 5;
-    cout<<pivot(arr,0,n-1);
+    cout<<pivot(arr,n);
 }
