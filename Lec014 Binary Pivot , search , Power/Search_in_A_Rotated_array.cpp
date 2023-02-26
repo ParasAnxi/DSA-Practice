@@ -1,4 +1,5 @@
 #include<vector>
+using namespace std;
 class Solution {
 public:
     int bS(vector<int>& arr,int s,int e ,int key){
