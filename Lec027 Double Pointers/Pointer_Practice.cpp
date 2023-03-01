@@ -272,6 +272,4 @@ int main(){
         cout << f(c, b, a);
         return 0;
     }  
-
-
 }
