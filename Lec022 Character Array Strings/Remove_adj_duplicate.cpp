@@ -1,5 +1,5 @@
-class Solution {
-public:
+#include<bits/stdc++.h>
+using namespace std;
     string removeDuplicates(string s) {
         // int x = s.size();
         // if(x==1) return s;
@@ -29,7 +29,7 @@ public:
         ans.push_back(s[0]);
         while(i<s.length())
         {
-            if(ans.empty() == 0)
+            if(ans.empty()==0)
             {
                 if(ans.back()==s[i])
                 {
@@ -48,5 +48,4 @@ public:
         }
         return ans;
     
-    }
-};
+    };

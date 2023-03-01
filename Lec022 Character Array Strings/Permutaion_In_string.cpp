@@ -1,5 +1,5 @@
-class Solution {
-public:
+#include<bits/stdc++.h>
+using namespace std;
     bool checkEqual(int a[26],int b[26]){
         for(int i = 0; i<26;i++){
             if(a[i]!=b[i])
@@ -38,4 +38,3 @@ public:
         }
         return 0;   
     }
-};
