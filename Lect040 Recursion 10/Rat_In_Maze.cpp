@@ -41,15 +41,15 @@ void solve(vector<vector<int>>&m ,int n,vector<string>& ans,int x ,int y ,vector
         solve(m,n,ans,newX,newY,visited,path);
         path.pop_back();
     }
-    int newX = x-1;
-    int newY = y;
+    newX = x-1;
+    newY = y;
 
     if(isSafe(newX,newY,n,visited,m)){
         path.push_back('U');
         solve(m,n,ans,newX,newY,visited,path);
         path.pop_back();
     }
-    
+
     visited[x][y]=0;
 }
 vector<string> findPath(vector<vector<int>>&m ,int n){
