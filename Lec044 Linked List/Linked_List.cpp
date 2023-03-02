@@ -9,9 +9,6 @@ class Node{
         this-> data = data;
         this->next = NULL;
     }
-    // ~Node(){
-    //     cout<<"Destrcutor"<<endl;
-    // }
 };
 int main(){
     Node* node1 = new Node(10);
