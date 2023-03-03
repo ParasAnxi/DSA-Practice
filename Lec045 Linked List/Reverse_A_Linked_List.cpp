@@ -12,6 +12,9 @@ public:
     }
 };
 Node* reverseLinkedList(Node *head){
+    if(head==NULL || head->next==NULL){
+		return head;
+	}
     Node* prev = NULL;
     Node* forward = NULL;
     Node* curr = head;
