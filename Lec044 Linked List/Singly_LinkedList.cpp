@@ -18,13 +18,25 @@ class Node{
         cout<<"MEMORY FREE of : "<<value<<endl;
     }
 };
-void insertAtHead(Node* &head,int data){
+void insertAtHead(Node* &head,Node* &tail,int data){
+    if(head==NULL){
+        Node* node = new Node(data);
+        head = node;
+        tail = node;
+    }
+    else{
     Node* temp = new Node(data);
     temp->next = head;
     head = temp;
+    }
 }
 
-void insertAtTail(Node* &tail,int data){
+void insertAtTail(Node* & head , Node* &tail,int data){
+    if(tail==NULL){
+        Node* node = new Node(data);
+        tail = node;
+        head = node;
+    }
     Node* temp = new Node(data);
     tail->next=temp;
     tail = tail->next; //tail = temp
@@ -32,7 +44,7 @@ void insertAtTail(Node* &tail,int data){
 
 void insertAtPosition(Node* &head ,Node* &tail,int position,int data){
     if(position==1){
-        return insertAtHead(head,data);
+        return insertAtHead(head,tail,data);
     }
 
     Node* temp = head;
@@ -42,7 +54,7 @@ void insertAtPosition(Node* &head ,Node* &tail,int position,int data){
         count++;
     }
     if(temp->next == NULL){
-        insertAtTail(tail,data);
+        insertAtTail(head,tail,data);
     }
     Node* nodeToInsert = new Node(data);
     nodeToInsert->next = temp->next;
@@ -74,6 +86,15 @@ void deleteNode(Node* &head,Node* &tail,int position){
             delete curr;
     }
 }
+int getLength(Node* &head){
+    Node* temp = head;
+    int len = 0;
+    while(temp!=NULL){
+        len++;
+        temp = temp -> next;
+    }
+    return len;
+}
 void print(Node* &head){
     Node *temp = head;
     while(temp!=NULL){
@@ -86,13 +107,14 @@ int main(){
     Node* node1 = new Node(10);
     Node* head = node1;
     Node* tail = node1;
-    insertAtHead(head,20);
-    insertAtHead(head,21);
-    insertAtTail(tail,30);
-    insertAtTail(tail,40);
+    insertAtHead(head,tail,20);
+    insertAtHead(head,tail,21);
+    insertAtTail(head,tail,30);
+    insertAtTail(head,tail,40);
     insertAtPosition(head,tail,1,22);
     deleteNode(head,tail,6);
     print(head);
+    cout<<"Length : "<<getLength(head)<<endl;
     cout<<"Head data : "<<head->data<<endl;
     cout<<"Tail data : "<<tail->data<<endl;
 }
