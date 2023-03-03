@@ -21,3 +21,8 @@ void reverse(Node* &head,Node* curr,Node* prev){
     reverse(head,forward,curr);
     curr->next = prev;
 }
+Node* reverseLinkedList(Node *head){
+    Node* prev=NULL;
+	Node* curr = head;
+	reverse(head,prev,curr);
+}
