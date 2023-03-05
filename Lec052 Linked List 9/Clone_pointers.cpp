@@ -61,7 +61,7 @@ Node *copyList(Node *head){
         originalNode->next = cloneNode->next;
         originalNode = originalNode->next;
         if(originalNode!=NULL){
-            cloneNode=originalNode->next;
+            cloneNode->next=originalNode->next;
         }
         cloneNode = cloneNode->next;
     }
