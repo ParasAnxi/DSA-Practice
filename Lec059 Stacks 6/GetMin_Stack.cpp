@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+using namespace std;
 class SpecialStack {
     // Define the data members.
     stack<int> s;
