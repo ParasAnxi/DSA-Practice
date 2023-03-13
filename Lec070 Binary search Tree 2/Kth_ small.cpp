@@ -1,19 +1,19 @@
 #include <bits/stdc++.h> 
-    class BinaryTreeNode 
+    class Node 
     {
     public : 
         int data;
-        BinaryTreeNode *left;
-        BinaryTreeNode *right;
+        Node *left;
+        Node *right;
 
-        BinaryTreeNode(int data) {
+        Node(int data) {
             this -> data = data;
             left = NULL;
             right = NULL;
         }
     };
 
-int solve(BinaryTreeNode<int>* root,int& i, int k){
+int solve(Node* root,int& i, int k){
     if(root == NULL){
         return -1;
     }
@@ -27,7 +27,7 @@ int solve(BinaryTreeNode<int>* root,int& i, int k){
     }
     return solve(root->right,i,k);
 }
-int kthSmallest(BinaryTreeNode<int>* root, int k) {
+int kthSmallest(Node* root, int k) {
     int i = 0;
     int ans = solve(root,i,k);
     return ans;
