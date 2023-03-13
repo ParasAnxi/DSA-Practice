@@ -51,7 +51,48 @@ void levelOrderTraversal(Node* root){
         }
     } 
 }
-
+Node* min(Node* root){
+    Node* temp = root;
+    while(temp->left!=NULL){
+        temp = temp->left;
+    }
+    return temp;
+}
+Node* deleteBST(Node* root , int val){
+    if(root == NULL){
+        return NULL;
+    }
+    if(root->data == val){
+        if(root->left == NULL){
+            delete root;
+            return NULL;
+        }
+        if(root->left!= NULL && root->right == NULL){
+            Node* temp = root->left;
+            delete root;
+            return temp;
+        }
+        if(root->left== NULL && root->right != NULL){
+            Node* temp = root->right;
+            delete root;
+            return temp;
+        }
+        if(root->left!=NULL && root->right!=NULL){
+            int mini = min(root->right)->data;
+            root->data = mini;
+            root->right = deleteBST(root->right,mini);
+            return root;
+        }
+    }
+    else if(root->data > val){
+        root->left = deleteBST(root->left,val);
+        return root;
+    }
+    else{
+        root->right = deleteBST(root->right,val);
+        return root;
+    }
+}
 void takeInput(Node* &root){
     int data;
     cin>>data;
@@ -64,5 +105,7 @@ int main(){
     Node* root = NULL;
     cout<<"Enter data : "<<endl;
     takeInput(root);
+    levelOrderTraversal(root);
+    root = deleteBST(root,30);
     levelOrderTraversal(root);
 }
