@@ -1,8 +1,5 @@
 #include <bits/stdc++.h> 
-/*************************************************************
-    
-    Following is the Binary Tree node structure:
-
+using namespace std;
     class TreeNode{
 
         public :
@@ -27,7 +24,6 @@
         }   
     };
 
-*************************************************************/
 
 void inOrder(TreeNode<int>* root ,vector<int> &io){
     if(root==NULL)
