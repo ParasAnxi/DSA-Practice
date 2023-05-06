@@ -1,8 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int maximumFrequency(vector<int> &arr, int n)
-{
+int maximumFrequency(vector<int> &arr, int n){
     unordered_map<int,int>cnt;
     int maxFreq = 0;
     int maxAns = 0;
