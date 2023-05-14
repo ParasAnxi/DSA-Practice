@@ -31,7 +31,7 @@ void insertAtHead(Node* &head,Node* &tail,int data){
     }
 }
 
-void insertAtTail(Node* & head , Node* &tail,int data){
+void insertAtTail(Node*&head , Node* &tail,int data){
     if(tail==NULL){
         Node* node = new Node(data);
         tail = node;
