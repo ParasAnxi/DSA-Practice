@@ -1,7 +1,7 @@
 class Solution {
 public:
     long long bS(int x){
-         int s = 0;
+        int s = 0;
         int e = x;
         int ans = -1;
         long long int mid = s+(e-s)/2;

@@ -3,12 +3,12 @@ using namespace std;
 
 bool isRandS(int *arr, int n){
     int count = 0;
-    for (int i = 1; i < n - 1; i++){
+    for (int i = 1; i < n ; i++){
         if (arr[i - 1] > arr[i]){
             count++;
         }
     }
-    if (arr[n - 1] < arr[0])
+    if (arr[n - 1] > arr[0])
         count++;
 
     return count <= 1;

@@ -19,5 +19,5 @@ int main(){
     cout << "Enter Base 10 : ";
     cin >> n;
     cout << "Compliment is : ";
-    compliment(n);
+    cout<<compliment(n);
 }

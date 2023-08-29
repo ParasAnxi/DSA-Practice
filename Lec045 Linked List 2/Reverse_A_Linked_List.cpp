@@ -25,4 +25,5 @@ Node* reverseLinkedList(Node *head){
         prev=curr;
         curr=forward;
     }
+    return prev;
 }

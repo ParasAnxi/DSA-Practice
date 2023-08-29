@@ -16,8 +16,8 @@ int bubbleSort(int *arr, int n){
     }
 }
 int main(){
-    int arr[5]={3,2,1,4,5};
-    bubbleSort(arr,5);
+    int arr[10]={3,2,1,8,7,5,6,9,4,10};
+    bubbleSort(arr,10);
     for(auto x:arr){
         cout<<x<<" ";
     }

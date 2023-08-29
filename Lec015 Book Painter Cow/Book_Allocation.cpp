@@ -14,6 +14,7 @@ bool isPossible(vector<int> arr, int n , int m ,int mid){
             if(student > m || arr[i] > mid){
                 return false;
             }
+            pages = arr[i];
         }
     }
     return true;

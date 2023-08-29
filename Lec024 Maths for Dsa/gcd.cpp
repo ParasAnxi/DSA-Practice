@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//Euclid Algorithm
 int gcd(int a, int b){
     if(a==0) return b;
     if(b==0) return a;

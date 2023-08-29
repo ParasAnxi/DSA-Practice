@@ -13,7 +13,7 @@ using namespace std;
         int endingCol = col-1;
         
         while(count<total){
-            for(int i = startingRow ;i<=endingCol && count<total ; i++){
+            for(int i = startingCol ;i<=endingCol && count<total ; i++){
                ans.push_back(matrix[startingRow][i]);
                 count++;
             }
