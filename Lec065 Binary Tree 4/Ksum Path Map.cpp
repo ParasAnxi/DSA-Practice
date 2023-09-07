@@ -1,23 +1,17 @@
 class Solution
 {
 private:
-    void solve(Node *root, unordered_map<int, int> &mp, int k, int &count, int prev)
-    {
-        if (root == NULL)
-        {
+    void solve(Node *root, unordered_map<int, int> &mp, int k, int &count, int sum){
+        if (root == NULL){
             return;
         }
-
-        int curr = prev + root->data;
-
-        if (mp.find(curr - k) != mp.end())
-        {
-            count += mp[curr - k];
+        int curr = sum + root->data;
+        if (curr == k){
+            count++;
         }
 
-        if (curr == k)
-        {
-            count++;
+        if (mp.find(curr - k) != mp.end()){
+            count += mp[curr - k];
         }
 
         mp[curr]++;
