@@ -96,8 +96,8 @@ struct Node {
 };*/
 class Solution {
 public:
-    vector<int> inOrder(Node* root)
-    {   stack<Node*> st;
+    vector<int> inOrder(Node* root){   
+        stack<Node*> st;
         vector<int> inorder;
         st.push(root);
         while(!st.empty()){

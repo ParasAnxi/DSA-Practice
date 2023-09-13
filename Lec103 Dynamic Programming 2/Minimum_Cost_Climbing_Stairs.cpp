@@ -37,12 +37,17 @@ public:
         return min(prev1,prev2);
     }
     int minCostClimbingStairs(vector<int>& cost) {
-        //meomoization
+        //recursion
         // int n=cost.size();
-        // vector<int>dp(n+1,-1);
         // int ans=min(solve(cost,n-1,dp),solve(cost,n-2,dp));
         // return ans;
-        
+
+        // Memoization
+        //  int n = cost.size();
+        // vector<int>dp(n+1,-1);
+        // int ans=min(solve(cost,n-1,dp),solve(cost,n-2,dp));
+        //  return ans;
+
         //tabulation
         // int n=cost.size();
         // return solve(cost,n);
