@@ -61,5 +61,5 @@ int solveSo(vector<int>&nums){
     return prev1;
 }
 int maxnimumAdjacentSum(vector<int>&nums){
-    return solveTab(nums);
+    return solveSo(nums);
 }
