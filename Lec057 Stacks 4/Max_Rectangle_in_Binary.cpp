@@ -13,7 +13,6 @@ vector<int> nextSmallerElement(int *arr, int n) {
             {
                 s.pop();
             }
-            //ans is stack ka top
             ans[i] = s.top();
             s.push(i);
         }
@@ -31,7 +30,6 @@ vector<int> nextSmallerElement(int *arr, int n) {
             {
                 s.pop();
             }
-            //ans is stack ka top
             ans[i] = s.top();
             s.push(i);
         }

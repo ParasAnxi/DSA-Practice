@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+ #include<bits/stdc++.h>
 using namespace std;
 
 bool isPossible(vector<int> stalls,int k ,int mid){
@@ -18,7 +18,7 @@ bool isPossible(vector<int> stalls,int k ,int mid){
 
 int aggressiveCows(vector<int> &stalls, int k)
 {
-    sort(stalls.begin(),stalls.end());
+   sort(stalls.begin(),stalls.end());
    int start = 0;
    int n = stalls.size();
    int maxi = -1;

@@ -95,6 +95,35 @@ int solveSo(vector<int> &weight,int n, vector<int> value, int capacity, int inde
     }
     return prev[capacity];
 }
+int soOp(vector<int> &weight, vector<int> &value, int n, int capacity)
+{
+    vector<int> curr(capacity + 1, 0);
+    for (int c = weight[0]; c <= capacity; c++)
+    {
+        if (weight[0] <= capacity)
+        {
+            curr[c] = value[0];
+        }
+        else
+        {
+            curr[c] = 0;
+        }
+    }
+    for (int i = 1; i < n; i++)
+    {
+        for (int c = capacity; c >= 0; c--)
+        {
+            int include = 0;
+            if (weight[i] <= c)
+            {
+                include = value[i] + curr[c - weight[i]];
+            }
+            int exclude = curr[c];
+            curr[c] = max(include, exclude);
+        }
+    }
+    return curr[capacity];
+}
 int knacksack(vector<int> weight, vector<int> value, int n, int maxWeight){
     return solveSo(weight,n,value,maxWeight,n-1);
 }
