@@ -68,6 +68,6 @@ void buildFromLevelOrder(Node* &root) {
 int main(){
 Node* root = NULL;
 // 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
-// 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1
+// 1 3 5 7 11 17 -1 -1 -1 -1 -1 -1 -1
 buildFromLevelOrder(root);
 }

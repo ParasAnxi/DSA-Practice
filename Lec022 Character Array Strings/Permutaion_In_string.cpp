@@ -7,7 +7,7 @@ using namespace std;
         }
         return 1;
     }
-    bool checkInclusion(string s1, string s2) {
+    bool checkInclusion1(string s1, string s2) {
         int count1[26]={0};
         for(int i = 0 ; i<s1.length();i++){
             int index = s1[i]-'a';
@@ -37,4 +37,24 @@ using namespace std;
             return 1;
         }
         return 0;   
+    }
+
+    bool checkInclusion(string s1, string s2){
+        int n = s1.length(), m = s2.length();
+        if(n > m) return false;
+        vector<int>count(26),window(26);
+        for(int i = 0; i < n ;i++){
+            count[s1[i] - 'a']++;
+            window[s2[i] - 'a']++;
+        }
+        if(count == window) return true;
+        for(int i = n ; i < m;i++){
+            window[s2[i] - 'a']++;
+            window[s2[i - n] - 'a']--;
+            if(count == window) return true;
+        }
+        return false;
+    }
+    int main(){
+        cout<<checkInclusion("ed","abhidesjs")<<endl;
     }

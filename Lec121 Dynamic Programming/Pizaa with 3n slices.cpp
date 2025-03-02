@@ -2,7 +2,7 @@
 using namespace std;
 // int solve(int index,int endIndex,vector<int>&slices,int n){
 //     if(n==0 || index>endIndex) return 0;
-//     int include = slices[index] + solve(index+1,endIndex,slices,n-1);
+//     int include = slices[index] + solve(index+2,endIndex,slices,n-1);
 //     int exclude = 0 + solve(index+1,endIndex,slices,n);
 //     return max(include,exclude);
 // }

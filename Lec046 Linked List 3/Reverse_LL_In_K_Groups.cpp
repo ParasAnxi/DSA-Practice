@@ -26,7 +26,7 @@ Node *kReverse(Node *head, int k){
         count++;
     }
     if(next!=NULL){
-        head->next = kReverse(head,k);
+        head->next = kReverse(next,k);
     }
     return prev;
 }

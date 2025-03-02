@@ -19,7 +19,6 @@ class TrieNode{
 class Trie{
     public:
     TrieNode* root;
-
     Trie(){
         root = new TrieNode('\0');
     }

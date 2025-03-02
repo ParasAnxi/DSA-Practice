@@ -101,7 +101,8 @@ public:
         vector<int> inorder;
         st.push(root);
         while(!st.empty()){
-            Node* curr=st.top(); st.pop();
+            Node* curr=st.top(); 
+            st.pop();
             if((curr->left || curr->right )){
                 if(curr->right) st.push(curr->right);
                 st.push(curr);
@@ -109,7 +110,9 @@ public:
                 curr->left=NULL;
                 curr->right=NULL;
             }
-            else{ inorder.push_back(curr->data);}
+            else{ 
+                inorder.push_back(curr->data);
+                }
         }
         return inorder;
     }

@@ -9,6 +9,7 @@ using namespace std;
 //     if(mat[i][j] == 1){
 //         int ans = 1 + min(right,min(diagonal,down));
 //         maxi = max(maxi,ans);
+//         return ans;
 //     }else{return 0;}
 // } 
 // int maxSquare(int n, int m, vector<vector<int>> mat){
